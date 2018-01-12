@@ -1,13 +1,22 @@
 {
   "name": "cryptoprice-dash",
   "homepage": "https://github.com/sharewithamar/cryptoprice-dash",
-  "authors": ["Amar <sharewithamar@gmail.com>"],
+  "authors": [
+    "Amar <sharewithamar@gmail.com>"
+  ],
   "description": "",
   "main": "",
   "license": "MIT",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "polymer": "Polymer/polymer#2.0.0",
-    "iron-ajax": "PolymerElements/iron-ajax#^2.0.8"
+    "iron-ajax": "PolymerElements/iron-ajax#^2.0.8",
+    "paper-spinner": "PolymerElements/paper-spinner#^2.0.0"
   }
 }
