@@ -4,9 +4,10 @@
 <dom-module id="cryptoprice-dash">
     <template>
         <iron-ajax id="coinbase" handle-as="json" on-response="_handleResponse"></iron-ajax>
-        <p>[[currencies.0.code]]-[[currencies.0.name]]-[[currencies.0.price]]</p>
-        <p>[[currencies.1.code]]-[[currencies.1.name]]-[[currencies.1.price]]</p>
-        <p>[[currencies.2.code]]-[[currencies.2.name]]-[[currencies.2.price]]</p>
+        <template is="dom-repeat" items="[[currencies]]">
+            <p>[[item.code]]-[[item.name]]-[[item.price]]</p>
+        </template>
+
     </template>
     <script>
         class CryptopriceDash extends Polymer.Element {
@@ -66,6 +67,7 @@
                 var index = this.currencies.map(e => e.code).indexOf(code);
 
                 this.set('currencies.' + index + '.price', data.response.data.amount);
+                //data path currencies.0.price
             }
 
         }
